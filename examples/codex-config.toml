@@ -1,0 +1,9 @@
+# ~/.codex/config.toml
+model = "Qwen3.8-27B"
+model_provider = "buzzai"
+
+[model_providers.buzzai]
+name = "buzzAI"
+base_url = "https://api.heybuzzai.com/v1"
+env_key = "BUZZAI_API_KEY"
+wire_api = "responses"
