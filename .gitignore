@@ -1,0 +1,6 @@
+# keep API keys out of the repo: the examples read BUZZAI_API_KEY from the environment
+.env
+.env.*
+node_modules/
+__pycache__/
+.venv/
