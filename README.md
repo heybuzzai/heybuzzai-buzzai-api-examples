@@ -20,9 +20,9 @@ Setup and code examples for the [buzzAI](https://heybuzzai.com/) API: Claude Cod
 
 ## สถานะ · Status
 
-ตอนนี้เปิดให้ขอร่วมทดสอบรอบที่ 1 จำนวนจำกัด รอบนี้จะเปิดใช้เมื่อมีผู้สมัครครบโควต้าที่กำหนด แล้วเราจะส่ง API key ทางอีเมล การส่งแบบฟอร์มยังไม่ใช่การชำระเงิน หลังขอร่วมทดสอบ ทีมจะติดต่อเรื่องการชำระเงินทางอีเมล
+ตอนนี้เปิดให้ขอร่วมทดสอบรอบที่ 1 จำนวนจำกัด รอบนี้จะเปิดใช้เมื่อมีผู้สมัครครบโควต้าที่กำหนด แล้วเราจะส่ง API key ทางอีเมล การส่งแบบฟอร์มยังไม่ใช่การชำระเงิน หลังขอร่วมทดสอบ ทีมจะติดต่อเรื่องชำระเงินผ่านพร้อมเพย์หรือโอนเงินเข้าบัญชีธนาคารทางอีเมล
 
-Round 1 is open for sign-ups, in limited numbers. The API opens for this round once sign-ups reach the round's quota, and then we email you an API key. Signing up is not a payment. After you join, the team contacts you by email about payment.
+Round 1 is open for sign-ups, in limited numbers. The API opens for this round once sign-ups reach the round's quota, and then we email you an API key. Signing up is not a payment. After you join, the team emails you to arrange payment by PromptPay or bank transfer.
 
 **[ขอร่วมทดสอบ · Join round 1](https://heybuzzai.com/#waitlist)**
 
@@ -33,23 +33,24 @@ Round 1 is open for sign-ups, in limited numbers. The API opens for this round o
 | Plan | Price | Agents at once | Accounts | Context | Queue lane |
 |---|---|---|---|---|---|
 | Day Pass | ฿99 / day | 1 | 1 person | 128K | Normal |
-| Mini | ฿350 / month | 1 | 1 person | 64K | Normal |
-| Lite | ฿750 / month | 1 | 1 person | 128K | Normal |
-| Solo | ฿1,290 / month | 1 | 1 person | 256K | Priority |
+| Week Pass | ฿390 / 7 days | 1 | 1 person | 128K | Normal |
+| Mini | ฿490 / month | 1 | 1 person | 64K | Normal |
+| Lite | ฿990 / month | 1 | 1 person | 128K | Normal |
+| Solo | ฿1,690 / month | 1 | 1 person | 256K | Priority |
 | Studio | ฿7,900 / month | 1 | 3 | 256K | Priority+ |
 | Starter | ฿15,900 / month | 2 | 6 | 256K | Priority+ |
 | Team | ฿31,900 / month | 4 | 12 | 256K | Priority+ |
 | Business | ฿62,900 / month | 8 | 24 | 256K | Priority+, SLA 99.5% availability in business hours |
 | Dedicated | Contact sales | A whole GPU card | — | Set to your work | Your own card |
 
-- แพ็ก Personal (Day Pass, Mini, Lite และ Solo) ใช้ได้ 1 คน รันได้ทีละ 1 agent ถ้าเครื่องมือของคุณแตก sub-agent ก็ยังใช้ได้ แต่ sub-agent จะผลัดกันทำงานทีละตัว พนักงานของบริษัทให้ใช้แพ็กบริษัท
+- แพ็ก Personal (Day Pass, Week Pass, Mini, Lite และ Solo) ใช้ได้ 1 คน รันได้ทีละ 1 agent ถ้าเครื่องมือของคุณแตก sub-agent ก็ยังใช้ได้ แต่ sub-agent จะผลัดกันทำงานทีละตัว พนักงานของบริษัทให้ใช้แพ็กบริษัท
 - แพ็กบริษัทคิดตามจำนวน agent ที่รันพร้อมกัน และจำนวน account ที่ใช้ร่วมกันทั้งทีม ทุกแพ็กบริษัทซื้อช่องจอง Reserved เพิ่มได้ ช่องละ 12,900 บาทต่อเดือน
 - ช่วงที่คนใช้เยอะอาจต้องรอคิว ใครเพิ่งใช้ไปน้อยจะได้คิวก่อน ในเวลาทำการ (จันทร์–ศุกร์ 08:00–20:00 น.) แพ็กบริษัทและช่องจองได้ใช้ก่อน แพ็ก Personal จึงอาจต้องรอคิว
 - ราคาแพ็กบริษัทยังไม่รวม VAT ตอนนี้ยังไม่เก็บ เพราะเรายังไม่ได้จด VAT
 
 <!-- -->
 
-- Personal plans (Day Pass, Mini, Lite and Solo) are for one person and run one agent at a time. If your tool starts sub-agents, they still work, but they take turns. Company staff should use a company plan.
+- Personal plans (Day Pass, Week Pass, Mini, Lite and Solo) are for one person and run one agent at a time. If your tool starts sub-agents, they still work, but they take turns. Company staff should use a company plan.
 - Company plans are sold by agents at once and by accounts shared across the team. Any company plan can add a Reserved slot at ฿12,900 per slot per month.
 - At peak times you may have to queue. People who have used less recently go first. In business hours (Monday to Friday, 08:00–20:00 Thailand time), company plans and reserved slots go first, so Personal plans may wait.
 - Company plan prices exclude VAT. We don't charge VAT yet, because buzzAI is not VAT-registered.
@@ -288,7 +289,7 @@ Context ตามแพ็ก · Context by plan:
 | Plan | Context | `CLAUDE_CODE_MAX_CONTEXT_TOKENS` |
 |---|---|---|
 | Mini | 64K | `64000` |
-| Day Pass, Lite | 128K | `131072` |
+| Day Pass, Week Pass, Lite | 128K | `131072` |
 | Solo, Studio, Starter, Team, Business | 256K | `262144` |
 | Dedicated | ตั้งเองได้ · set to your work | — |
 
